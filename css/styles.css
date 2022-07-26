@@ -15,6 +15,7 @@
     --primary-white-color: #FFFFFF;
     --secondary-white-color: #F5F4FA;
     --secondary-background-color: #2F303A;
+    --social-link-color: #AFB1B8;
 }
 
 body {
@@ -146,11 +147,19 @@ nav .link:focus {
 
 .contact {
     color: var(--primary-text-color);
+    display: flex;
+    align-items: center;
 }
 
 .contact:hover,
 .contact:focus {
     color: var(--accent-color);
+}
+
+/* Icons */
+.icon-contact {
+    margin-right: 10px;
+    fill: currentColor;
 }
 
 /* MAIN */
@@ -221,6 +230,35 @@ nav .link:focus {
     margin-right: 30px;
 }
 
+.adventage-list li::before {
+    content: '';
+    display: block;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: var(--secondary-white-color);
+    border-radius: 4px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.adventage-list li:nth-child(1)::before {
+    background-image: url("../images/symbol/sprite.svg#icon-antenna") 
+}
+
+.adventage-list li:nth-child(2)::before {
+    background-image: url("../images/symbol/sprite.svg#icon-clock");
+}
+
+.adventage-list li:nth-child(3)::before {
+    background-image: url("../images/symbol/sprite.svg#icon-diagram");
+}
+
+.adventage-list li:nth-child(4)::before {
+    background-image: url("../images/symbol/sprite.svg#icon-astronaut");
+}
+
+
 .adventage-title {
     margin-bottom: 10px;
 
@@ -271,7 +309,7 @@ nav .link:focus {
     display: flex;
 }
 
-.team-list li:not(:last-child) {
+.team-list > li:not(:last-child) {
     margin-right: 30px;
 }
 
@@ -300,9 +338,43 @@ nav .link:focus {
 }
 
 .hero-desc {
+    margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.2;
 }
+
+.social-list {
+    display: flex;
+    justify-content: center;
+}
+
+.social-link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: var(--social-link-color);
+}
+
+
+.social-link:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-white-color);
+}
+
 
 
 /* FOOTER */
