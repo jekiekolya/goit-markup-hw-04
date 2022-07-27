@@ -15,7 +15,6 @@
     --primary-white-color: #FFFFFF;
     --secondary-white-color: #F5F4FA;
     --secondary-background-color: #2F303A;
-    --social-link-color: #AFB1B8;
 }
 
 body {
@@ -69,6 +68,11 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     margin: 0px;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 /* HEADER */
@@ -147,8 +151,6 @@ nav .link:focus {
 
 .contact {
     color: var(--primary-text-color);
-    display: flex;
-    align-items: center;
 }
 
 .contact:hover,
@@ -156,30 +158,12 @@ nav .link:focus {
     color: var(--accent-color);
 }
 
-/* Icons */
-.icon-contact {
-    margin-right: 10px;
-    fill: currentColor;
-}
-
 /* MAIN */
 /* Order a service */
-.overlay {
-   max-width: 1600px; 
-   height: 600px;
-   margin-left: auto;
-   margin-right: auto;
-   background-image: linear-gradient(
-    to right,
-    rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)
-   ),
-   url(../images/background/group-people.jpg);
-}
-
 .order {
-    padding: 200px 0px;
-    background-color: #C4C4C4;
+    background-color: var(--secondary-background-color);
+    padding-top: 200px;
+    padding-bottom: 200px;
     text-align: center;
 }
 
@@ -220,6 +204,7 @@ nav .link:focus {
 /* Our adventages */
 .adventage {
     padding-top: 94px;
+    padding-bottom: 0px;
 }
 
 .adventage-list {
@@ -229,35 +214,6 @@ nav .link:focus {
 .adventage-list li:not(:last-child) {
     margin-right: 30px;
 }
-
-.adventage-list li::before {
-    content: '';
-    display: block;
-    height: 120px;
-    margin-bottom: 30px;
-    background-color: var(--secondary-white-color);
-    border-radius: 4px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.adventage-list li:nth-child(1)::before {
-    background-image: url("../images/symbol/sprite.svg#icon-antenna") 
-}
-
-.adventage-list li:nth-child(2)::before {
-    background-image: url("../images/symbol/sprite.svg#icon-clock");
-}
-
-.adventage-list li:nth-child(3)::before {
-    background-image: url("../images/symbol/sprite.svg#icon-diagram");
-}
-
-.adventage-list li:nth-child(4)::before {
-    background-image: url("../images/symbol/sprite.svg#icon-astronaut");
-}
-
 
 .adventage-title {
     margin-bottom: 10px;
@@ -274,11 +230,6 @@ nav .link:focus {
 }
 
 /* What we are doing */
-.section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
 .work img {
     display: block;
 }
@@ -309,12 +260,11 @@ nav .link:focus {
     display: flex;
 }
 
-.team-list > li:not(:last-child) {
+.team-list li:not(:last-child) {
     margin-right: 30px;
 }
 
 .team .list-item {
-    padding-bottom: 30px;
     width: 270px;
     text-align: center;
 
@@ -325,7 +275,11 @@ nav .link:focus {
 
 .hero-img {
     display: block;
-    margin-bottom: 30px;
+}
+
+.team-info {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .hero-title {
@@ -338,48 +292,14 @@ nav .link:focus {
 }
 
 .hero-desc {
-    margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.2;
 }
 
-.social-list {
-    display: flex;
-    justify-content: center;
-}
-
-.social-link {
-    display: flex;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    color: var(--social-link-color);
-}
-
-
-.social-link:not(:last-child) {
-    margin-right: 10px;
-}
-
-.social-icon {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
-}
-
-.social-link:hover,
-.social-link:focus {
-    background-color: var(--accent-color);
-    color: var(--primary-white-color);
-}
-
-
 
 /* FOOTER */
 /* address */
-footer {
+.footer {
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: var(--secondary-background-color);
@@ -457,7 +377,6 @@ address .contact {
 .card-item {
     width: 370px;
     margin: 15px;
-    padding-bottom: 20px;
 
     background: var(--primary-white-color);
     border: 1px solid #EEEEEE;
@@ -468,8 +387,12 @@ address .contact {
     margin: -1px 0 0 -1px;
 }
 
+.card-info {
+    padding: 20px 24px;
+}
+
 .card-title {
-    margin: 20px 24px 4px;
+    margin-bottom: 4px;
     color: var(--title-text-color);
     font-size: 18px;
     line-height: 2;
@@ -477,7 +400,6 @@ address .contact {
 }
 
 .card-desc {
-    margin: 0px 24px;
     max-width: 322px;
     
     font-size: 16px;
